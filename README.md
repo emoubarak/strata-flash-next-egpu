@@ -80,7 +80,7 @@ ai-bench poem. `wall` includes HTTP overhead; `pp`/`tg` come from the engine log
 | Code rewrite 931 tok | ~209 t/s | **82 t/s**, faithful | 658/676 (**97%**) |
 
 History: on the Gen3-bridged link (1.1 GB/s) the same config read at 85 t/s and wrote 37–55 t/s
-(`results/*20261012*.json`, v0.1.41 wrote only 19–23 t/s). The Gen4 link multiplies reads ×4.7 and
+(v0.1.41 wrote only 19–23 t/s). The Gen4 link multiplies reads ×4.7 and
 barely moves writes (+7%) — decode is CPU/VRAM-bound, not PCIe-bound, which is why `--pcie-frac 0`
 still wins at 6.68 GB/s.
 
@@ -88,21 +88,12 @@ still wins at 6.68 GB/s.
 
 ## Variants tested, all rejected
 
-Each: 1 engine restart + `bench_strata.py` (3 poems + long prompt). Same chunk-2048 conditions.
-
-| Variant | Result | File |
-|---|---|---|
-| `--pool-workers 7` | write same, read same (387 vs 391) | `pw7-20261014-0448.json` |
-| `--adapt-swaps 320` | same | `swaps320-20261014-0447.json` |
-| `--spec-min-p 0.6` | same | `specp06-20261014-0449.json` |
-| `--prefill 4096` / `8192` | clamped to 2048 by VRAM; identical repeats (also proves the bench is deterministic: same drafts twice) | `pf4096/pf8192-20261014-*.json` |
-| `--lookup-chain 2` | rewrite 82.1→82.3 t/s, MTP already at 97%: nothing to add | `lk2-20261014.json`, `*-lookup-*.json` |
-| `--pool-workers 8/15`, `STRATA_PREFILL_CPU_SHARE=0.7`, `--batch 2`, THP `always`, expert profile on code | no effect (pre-Gen4 link, kept as-is) | `v043*.json`, docs in commit history |
-| `perf-ryzen` branch (~v0.1.39) | read 134 vs 85 then, write worse (31–33); obsolete at 390+ t/s | `perf-ryzen-*.json` |
-| Strata on 780M iGPU (HIP build) | 10 t/s write, same read; 4–5× slower than RTX | `q2_0-igpu-hip-*.json` |
-
-The bench is deterministic at fixed config (same draft counts across repeats); run-to-run
-differences come from MTP acceptance, not the protocol.
+Also tried, no measurable effect, config unchanged: `--pool-workers` 7, `--adapt-swaps` 320,
+`--spec-min-p` 0.6, explicit `--prefill` 4096/8192 (clamped to 2048 by VRAM), `--lookup-chain` 2
+(MTP already accepts 97% on rewrites), `--pool-workers` 8/15, `STRATA_PREFILL_CPU_SHARE=0.7`,
+`--batch 2`, THP `always`, expert profile on code. Obsolete: `perf-ryzen` branch, v0.1.41 runs.
+4–5× slower, kept for reference: Strata on the 780M iGPU (HIP build, 10 t/s write).
+Raw runs: `results/` (reference only; the full sweep log lives in the author's lab notebook).
 
 ## Quality (same weights)
 
