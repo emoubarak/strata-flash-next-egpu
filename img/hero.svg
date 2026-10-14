@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+<rect width="1200" height="340" rx="16" fill="#0d1117"/>
+<text x="30" y="62" font-size="34" font-weight="700" fill="#e6edf3" font-family="sans-serif">Qwen3.8-Flash-Next 180B on RTX 3060 Ti 8 GB · OCuLink Gen4</text>
+<text x="30" y="98" font-size="19" fill="#8b949e" font-family="sans-serif">Strata Q2_0 · 64k context · Ryzen 7 8845HS mini PC · measured October 2026, same frozen prompts</text>
+<text x="30" y="128" font-size="15" fill="#8b949e" font-family="sans-serif">Write (ai-bench poem) is CPU/VRAM-bound at ~55 t/s on any link — the Gen4 link multiplies prompt reads ×4.7.</text>
+<rect x="30" y="150" width="255" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="54" y="205" font-size="44" font-weight="700" fill="#e6edf3" font-family="sans-serif">390 <tspan font-size="20" fill="#8b949e">t/s</tspan></text>
+  <text x="54" y="238" font-size="19" font-weight="600" fill="#3fb950" font-family="sans-serif">prompt read</text>
+  <text x="54" y="264" font-size="15" fill="#8b949e" font-family="sans-serif">7 893 tokens, ~20 s</text><rect x="315" y="150" width="255" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="339" y="205" font-size="44" font-weight="700" fill="#e6edf3" font-family="sans-serif">55 <tspan font-size="20" fill="#8b949e">t/s</tspan></text>
+  <text x="339" y="238" font-size="19" font-weight="600" fill="#3fb950" font-family="sans-serif">generation</text>
+  <text x="339" y="264" font-size="15" fill="#8b949e" font-family="sans-serif">ai-bench poem</text><rect x="600" y="150" width="255" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="624" y="205" font-size="44" font-weight="700" fill="#e6edf3" font-family="sans-serif">82 <tspan font-size="20" fill="#8b949e">t/s</tspan></text>
+  <text x="624" y="238" font-size="19" font-weight="600" fill="#3fb950" font-family="sans-serif">code rewrite</text>
+  <text x="624" y="264" font-size="15" fill="#8b949e" font-family="sans-serif">97% MTP accepted</text><rect x="885" y="150" width="255" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="909" y="205" font-size="44" font-weight="700" fill="#e6edf3" font-family="sans-serif">6.68 <tspan font-size="20" fill="#8b949e">GB/s</tspan></text>
+  <text x="909" y="238" font-size="19" font-weight="600" fill="#3fb950" font-family="sans-serif">eGPU link</text>
+  <text x="909" y="264" font-size="15" fill="#8b949e" font-family="sans-serif">Gen4 x4, measured</text>
+</svg>

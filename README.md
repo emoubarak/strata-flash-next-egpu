@@ -1,5 +1,7 @@
 # Qwen3.8-Flash-Next 180B (Strata) on RTX 3060 Ti 8 GB over OCuLink
 
+![390 t/s prompt read · 55 t/s generation · 82 t/s rewrite · 6.68 GB/s link](img/hero.svg)
+
 Dated speed measurements and the full working config for **Qwen3.8-Flash-Next 180B (~6B active)**
 run with [Strata](https://github.com/Niko1221/Strata) on a mini PC whose only strong GPU is an
 **RTX 3060 Ti 8 GB attached over OCuLink (PCIe Gen4 x4)**. Same machine and method as the sister repo
@@ -62,6 +64,8 @@ export STRATA_PREFILL_CPU_SHARE=1   # REQUIRED, see trap #1
 | `--adapt-every 1 --adapt-swaps 160 --adapt-decay 0.97` | adaptive expert cache | 67.8 vs 66.3 (swaps 80) vs 62.3 (default) on the calibration test |
 | `--expert-cache auto` | 839 slots @64k (1212 @32k) | |
 | `fit_max_tokens: true` | shrink `max_tokens` instead of refusing oversized requests | |
+
+![PCIe share sweep: 0 wins even at 6.68 GB/s](img/pcie-frac.svg)
 | cvec | refusal direction removed, layers 4–44 | |
 
 ## Speed (Gen4 link, 64k, retained config)
@@ -79,6 +83,8 @@ History: on the Gen3-bridged link (1.1 GB/s) the same config read at 85 t/s and 
 (`results/*20261012*.json`, v0.1.41 wrote only 19–23 t/s). The Gen4 link multiplies reads ×4.7 and
 barely moves writes (+7%) — decode is CPU/VRAM-bound, not PCIe-bound, which is why `--pcie-frac 0`
 still wins at 6.68 GB/s.
+
+![Gen3 bridged vs Gen4: reads x4.7, writes +15%](img/gen3-vs-gen4.svg)
 
 ## Variants tested, all rejected
 
