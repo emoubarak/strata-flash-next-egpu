@@ -1,0 +1,81 @@
+{
+ "label": "v043-cpushare1-prefill512-noborrow",
+ "runs": [
+  {
+   "wall": 4.5,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 105,
+    "total_tokens": 125,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 20,
+   "pp": 22.8,
+   "tg_tok": 105,
+   "tg": 29.2,
+   "drafts": "46/76",
+   "text": "In silicon veins, a thousand threads ignite,\nParallel hearts beating in unison.\nNo serial step to slow the light,\nJust k",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 3.0,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 122,
+    "total_tokens": 142,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 27.8,
+   "tg_tok": 122,
+   "tg": 43.8,
+   "drafts": "54/90",
+   "text": "In silicon veins, a thousand threads ignite,\nParallel streams of logic, bright and tight.\nNo serial bottleneck to slow t",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 2.1,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 75,
+    "total_tokens": 95,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 28.0,
+   "tg_tok": 75,
+   "tg": 40.8,
+   "drafts": "29/49",
+   "text": "In silicon veins, a thousand threads ignite,\nParallel minds in a single, glowing light.\nNo serial step to slow the rush,",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 422.7,
+   "finish": "length",
+   "usage": {
+    "prompt_tokens": 7893,
+    "completion_tokens": 100,
+    "total_tokens": 7993,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 7893,
+   "pp": 18.8,
+   "tg_tok": 100,
+   "tg": 36.0,
+   "drafts": "52/93",
+   "text": "Strata is a local AI engine that provides detailed technical documentation on its performance benchmarks, API usage, and",
+   "test": "long ~6k"
+  }
+ ]
+}

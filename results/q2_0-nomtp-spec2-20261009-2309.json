@@ -1,0 +1,81 @@
+{
+ "label": "q2_0-nomtp-spec2",
+ "runs": [
+  {
+   "wall": 8.8,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 114,
+    "total_tokens": 134,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 20,
+   "pp": 20.5,
+   "tg_tok": 114,
+   "tg": 14.5,
+   "drafts": "0/0",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel stride.\nThe CPU waits, a single mind,\nWhile th",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 7.3,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 121,
+    "total_tokens": 141,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 18.1,
+   "tg_tok": 121,
+   "tg": 17.4,
+   "drafts": "0/2",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel stride.\nThe CPU waits, a single mind,\nWhile th",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 6.8,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 114,
+    "total_tokens": 134,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 18.1,
+   "tg_tok": 114,
+   "tg": 17.7,
+   "drafts": "0/0",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel stride.\nThe CPU waits, a single mind,\nWhile th",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 116.8,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 7893,
+    "completion_tokens": 97,
+    "total_tokens": 7990,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 7893,
+   "pp": 71.9,
+   "tg_tok": 97,
+   "tg": 13.9,
+   "drafts": "0/3",
+   "text": "Strata is a local AI engine that provides detailed technical documentation on its performance benchmarks, API usage, and",
+   "test": "long ~6k"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "label": "q2_0-igpu-hip-cache5000",
+ "runs": [
+  {
+   "wall": 13.0,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 122,
+    "total_tokens": 142,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 20,
+   "pp": 17.7,
+   "tg_tok": 122,
+   "tg": 10.3,
+   "drafts": "56/97",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel dance.\nThe scalar mind, slow and deliberate,\nY",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 12.3,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 122,
+    "total_tokens": 142,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 19.4,
+   "tg_tok": 122,
+   "tg": 10.3,
+   "drafts": "56/97",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel dance.\nThe scalar mind, slow and deliberate,\nY",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 12.3,
+   "finish": "stop",
+   "usage": {
+    "prompt_tokens": 20,
+    "completion_tokens": 122,
+    "total_tokens": 142,
+    "prompt_tokens_details": {
+     "cached_tokens": 13
+    }
+   },
+   "pp_tok": 20,
+   "pp": 19.4,
+   "tg_tok": 122,
+   "tg": 10.3,
+   "drafts": "56/97",
+   "text": "In silicon veins, a thousand threads wake,\nNot one, but many, in parallel dance.\nThe scalar mind, slow and deliberate,\nY",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 105.0,
+   "finish": "length",
+   "usage": {
+    "prompt_tokens": 7893,
+    "completion_tokens": 100,
+    "total_tokens": 7993,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   },
+   "pp_tok": 7893,
+   "pp": 83.7,
+   "tg_tok": 100,
+   "tg": 9.4,
+   "drafts": "53/90",
+   "text": "This document details the technical specifications and performance benchmarks for the Strata engine, highlighting signif",
+   "test": "long ~6k"
+  }
+ ]
+}

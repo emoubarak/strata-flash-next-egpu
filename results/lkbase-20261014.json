@@ -1,0 +1,45 @@
+{
+ "label": "lkbase",
+ "runs": [
+  {
+   "wall": 2.5,
+   "finish": "stop",
+   "pp_tok": 20.0,
+   "pp": 61.2,
+   "tg_tok": 111.0,
+   "tg": 50.1,
+   "drafts": "47/83",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 1.6,
+   "finish": "stop",
+   "pp_tok": 20.0,
+   "pp": 78.7,
+   "tg_tok": 86.0,
+   "tg": 58.5,
+   "drafts": "39/63",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 1.5,
+   "finish": "stop",
+   "pp_tok": 20.0,
+   "pp": 78.4,
+   "tg_tok": 79.0,
+   "tg": 56.9,
+   "drafts": "30/48",
+   "test": "ai-bench tg200"
+  },
+  {
+   "wall": 22.2,
+   "finish": "length",
+   "pp_tok": 7893.0,
+   "pp": 387.6,
+   "tg_tok": 100.0,
+   "tg": 55.1,
+   "drafts": "50/69",
+   "test": "long ~6k"
+  }
+ ]
+}
