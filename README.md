@@ -121,7 +121,7 @@ Needs ~46 GiB free RAM and the RTX free. First start takes minutes (38 GB expert
 
 1. **`STRATA_PREFILL_CPU_SHARE=1` is load-bearing.** Without it the engine picks prefill chunk 512
    instead of 2048 (264 borrowed cache slots vs 701, same 839 slots / 420 MiB free) and long reads
-   drop to ~140 t/s. Files `*-chunk512.json` show the trap, not their flags.
+   drop to ~140 t/s.
 2. Check `prompt chunk auto:` in the engine log after every start: `2048 tokens` = healthy baseline,
    `512` = broken env. All numbers here are chunk-2048.
 3. VRAM ceiling: 9+ expert layers on the RTX = `cudaMalloc failed` (7605/8192 MiB used at 6 layers).
