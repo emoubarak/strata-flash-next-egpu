@@ -27,8 +27,8 @@ res = {"label": LABEL, "runs": []}
 for i in range(3):
     x = ask("Write a short poem about GPU programming.", 200); x["test"] = "ai-bench tg200"; res["runs"].append(x); print(x, flush=True)
 # même texte que les mesures du 2026-10-09/10 (DETAILS.md de Strata v0.1.41, commit fb58e0d), figé ici
-doc = open("~/repos/emoubarak/local-inference/benchmarks/strata/prompt-DETAILS-fb58e0d.md", errors="ignore").read()
+doc = open("~/repos/emoubarak-lab/local-inference/benchmarks/strata/prompt-DETAILS-fb58e0d.md", errors="ignore").read()
 for n_chars, name in [(24000, "long ~6k")]:
     p = "Summarize the following document in three sentences.\n\n" + doc[:n_chars]
     x = ask(p, 100); x["test"] = name; res["runs"].append(x); print({k: v for k, v in x.items() if k != "text"}, flush=True)
-json.dump(res, open(f"~/repos/emoubarak/local-inference/benchmarks/strata/{LABEL}-{time.strftime('%Y%m%d-%H%M')}.json", "w"), indent=1)
+json.dump(res, open(f"~/repos/emoubarak-lab/local-inference/benchmarks/strata/{LABEL}-{time.strftime('%Y%m%d-%H%M')}.json", "w"), indent=1)
