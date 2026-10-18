@@ -8,7 +8,7 @@ Writes LABEL-DATE.json next to this script.
 import json, os, re, sys, time, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 18090
-LOG = sys.argv[2] if len(sys.argv) > 2 else os.path.expanduser("~/repos/other/strata/strata-q2_0.log")
+LOG = sys.argv[2] if len(sys.argv) > 2 else os.path.expanduser("~/repos/tools/strata/strata-q2_0.log")
 LABEL = sys.argv[3] if len(sys.argv) > 3 else "q2_0"
 PROMPT_FILE = sys.argv[4] if len(sys.argv) > 4 else os.path.join(HERE, "prompt-benchmark.md")
 

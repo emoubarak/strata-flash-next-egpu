@@ -48,7 +48,7 @@ same speed (42.8 t/s poem before/after), answers lock-picking questions again.
 (~35 min) plus the sweeps below. Serve with:
 
 ```sh
-cd ~/repos/other/strata
+cd ~/repos/tools/strata
 export STRATA_PREFILL_CPU_SHARE=1   # REQUIRED, see trap #1
 .venv/bin/python serve/server.py --engine strata --config strata-q2_0.json --port 18090
 ```
@@ -106,8 +106,8 @@ Raw runs: `results/` (reference only; the full sweep log lives in the author's l
 ## Reproduce
 
 ```sh
-git clone https://github.com/Niko1221/Strata ~/repos/other/strata
-cd ~/repos/other/strata && git checkout 7695859a
+git clone https://github.com/Niko1221/Strata ~/repos/tools/strata
+cd ~/repos/tools/strata && git checkout 7695859a
 ./setup.sh --model qwen3.8-flash-next --family q2_0   # ~66 GB download + CUDA build
 ./setup.sh --calibrate --yes                          # ~35 min, verifies the table above on YOUR link
 # copy config/strata-q2_0.template.json -> strata-q2_0.json (replace $HOME), then serve (see above)
