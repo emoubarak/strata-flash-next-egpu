@@ -4,9 +4,10 @@
 
 Dated speed measurements and the full working config for **Qwen3.8-Flash-Next 180B (~6B active)**
 run with [Strata](https://github.com/Niko1221/Strata) on a mini PC whose only strong GPU is an
-**RTX 3060 Ti 8 GB attached over OCuLink (PCIe Gen4 x4)**. Same machine and method as the sister repo
-[emoubarak/minipc-egpu-llm](https://github.com/emoubarak/minipc-egpu-llm) (llama.cpp, 26–35B MoE);
-this repo is Strata-only.
+**RTX 3060 Ti 8 GB attached over OCuLink (PCIe Gen4 x4)**.
+
+> **Follow-up (Nov 2026):** same mini PC and cable with an RTX 3080 20 GB and Strata 0.2.9, prompt reads ~2,000 t/s
+> and generation 110-204 t/s: [emoubarak/strata-flash-next-rtx3080-20gb](https://github.com/emoubarak/strata-flash-next-rtx3080-20gb).
 
 All numbers below are measured on this machine with the frozen prompts in `bench/`. Nothing is estimated.
 Dates are in the filenames under `results/`.
