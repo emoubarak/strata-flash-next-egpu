@@ -1,7 +1,7 @@
 {
  "_comment": "Strata serve config for Qwen3.8-Flash-Next Q2_0 on RTX 3060 Ti 8 GB (OCuLink Gen4) + Ryzen 7 8845HS.",
  "_comment2": "Copy to your Strata checkout as strata-q2_0.json and replace $HOME. Measured on Strata 0.1.43; see ../README.md.",
- "exe": "$HOME/repos/tools/strata/engine/strata",
+ "exe": "$HOME/src/strata/engine/strata",
  "args": [
   "--pack",
   "$HOME/.local/share/strata/packs/q2_0",
@@ -10,7 +10,7 @@
   "--ple-gguf",
   "$HOME/.local/share/strata/models/Q2_0/Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00002-of-00002.gguf",
   "--expert-profile",
-  "$HOME/repos/tools/strata/data/expert-profile.bin",
+  "$HOME/src/strata/data/expert-profile.bin",
   "--expert-cache",
   "auto",
   "--prefill",
@@ -45,10 +45,10 @@
   "--cvec-dir",
   "per-layer"
  ],
- "cwd": "$HOME/repos/tools/strata",
+ "cwd": "$HOME/src/strata",
  "tokenizer": "$HOME/.local/share/strata/packs/q2_0/tokenizer",
  "model_name": "qwen3.8-flash-next-q2_0",
- "log": "$HOME/repos/tools/strata/strata-q2_0.log",
+ "log": "$HOME/src/strata/strata-q2_0.log",
  "port": 18090,
  "gpu": 0,
  "draft_vocab": "fr",
