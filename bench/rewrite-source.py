@@ -2,7 +2,7 @@
 Les vitesses viennent du journal du moteur (lignes « prompt N tokens ... read in X ms (Y tok/s), M generated in Z ms (W tok/s) »)."""
 import json, re, sys, time, urllib.request
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 18090
-LOG = sys.argv[2] if len(sys.argv) > 2 else "~/repos/tools/strata/strata-q2_0.log"
+LOG = sys.argv[2] if len(sys.argv) > 2 else "~/src/strata/strata-q2_0.log"
 LABEL = sys.argv[3] if len(sys.argv) > 3 else "q2_0"
 
 def ask(prompt, max_tokens, effort="none"):
